@@ -1,0 +1,19 @@
+group 'monitoring-service'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = "no.ntnu.monitoring.App"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-netty-http
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-netty-http', version: '2.26'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.inject/jersey-hk2
+    compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.26'
+}
