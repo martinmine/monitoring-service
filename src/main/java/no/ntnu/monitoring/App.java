@@ -10,7 +10,7 @@ public class App {
     private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) {
-        final int portNumber = 8080;
+        final int portNumber = 8081;
         final URI BASE_URI = URI.create("http://localhost:" + portNumber + "/");
 
         final ResourceConfig resourceConfig = new ResourceConfig()
