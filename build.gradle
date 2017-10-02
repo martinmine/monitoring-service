@@ -8,6 +8,9 @@ mainClassName = "no.ntnu.monitoring.App"
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://maven.repository.redhat.com/ga/'
+    }
 }
 
 dependencies {
@@ -16,4 +19,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.glassfish.jersey.inject/jersey-hk2
     compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.26'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.26'
+
 }
