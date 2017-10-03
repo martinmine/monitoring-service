@@ -14,7 +14,8 @@ public class App {
         final URI BASE_URI = URI.create("http://localhost:" + portNumber + "/");
 
         final ResourceConfig resourceConfig = new ResourceConfig()
-                .packages(App.class.getPackage().getName());
+                .packages(App.class.getPackage().getName())
+                .register(new CORSFilter());
 
         LOGGER.info("Starting server at " + BASE_URI);
         NettyHttpContainerProvider.createServer(BASE_URI, resourceConfig, true);
